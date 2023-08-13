@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "addy-mpc"
+version = "0.0.1"
+authors = [
+  { name="dolev146", email="dolev146@gmail.com" },
+  {name="yaakov103", email="yaakov103@gmail.com"},
+  {name="Aviad Gilboa", email="gilboa.aviad@gmail.com"},
+  {name="Daniel Zaken ", email="danielzaken5@gmail.com"},
+]
+description = "mpc implementation of all pairs shortest path"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy",
+    "sympy",
+    "networkx",
+    "matplotlib"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pypa/sampleproject"
+
