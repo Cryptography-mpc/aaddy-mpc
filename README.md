@@ -1,8 +1,5 @@
 # Multi-Party Computation Cryptography - Final Project
 
-* finish writing the development process api and demo and screenshots adding tests
-* fix the SSD document https://docs.google.com/document/d/1oWhDiyfaaCHef23QWVzcB4Yah-8EvjGF3wODgSoSex4/edit#
-
 <img src="https://github.com/Dolev-Dublon/Final-Project-Multiple-Party-Computation-Cryptograpy/assets/62290677/d7f77a75-62cb-42c5-a6e1-dce23579a213" width=150px />
 
 |<img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" /> |<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" /> |<img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?&style=for-the-badge&logo=Canva&logoColor=white" />  |
@@ -62,8 +59,32 @@ This project is an implementation of a secure multi-party protocol for the secur
 - [@Daniel Zaken](https://github.com/aaaa)
 - [@Aviad Gilboa](https://github.com/aaaa)
 
+## bit-or-privacy-preserving
 
-## Project Overview
+```mermaid
+sequenceDiagram
+actor Alice
+actor Bob
+    par send request
+    ServerA ->> Alice : 1 or 0 
+    activate Alice
+    ServerB ->> Bob : 1 or 0
+    end
+    
+    Alice ->> Alice: k
+    Alice ->> Bob: Ca , q , g , g^k
+    deactivate Alice
+    activate Bob
+    Bob ->> Alice : Cb
+    deactivate Bob
+    activate Alice
+    par Return the same result
+    Alice ->> ServerA : Algo result is 1 or 0 
+    Alice ->> Bob: Algo result
+    Bob ->> ServerB : Algo result
+    end
+    deactivate Alice
+ ```
 
 ## Project Goal
 
